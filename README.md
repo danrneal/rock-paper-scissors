@@ -15,4 +15,4 @@ That's it!
 
 ## License
 
-Rock, Paper, Scissors is licensed under the [MIT license](https://github.com/danrneal/adventure-game/blob/master/LICENSE).
+Rock, Paper, Scissors is licensed under the [MIT license](https://github.com/danrneal/rock-paper-scissors/blob/master/LICENSE).
