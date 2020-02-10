@@ -113,5 +113,11 @@ class Game:
 
 
 if __name__ == '__main__':
-    game = Game(HumanPlayer(), CyclePlayer())
+    computer_player = random.choice([
+        Player(),
+        RandomPlayer(),
+        CyclePlayer(),
+        ReflectPlayer()
+    ])
+    game = Game(HumanPlayer(), computer_player)
     game.play_game()
