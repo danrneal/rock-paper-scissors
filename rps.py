@@ -7,7 +7,7 @@
 
 import random
 
-moves = ['rock', 'paper', 'scissors']
+MOVES = ['rock', 'paper', 'scissors']
 
 
 class Player:
@@ -31,15 +31,15 @@ class Player:
 
 
 class RandomPlayer(Player):
-    """Creates a player that plays a random move from the moves array"""
+    """Creates a player that plays a random move from the MOVES array"""
 
     def move(self):
-        """Returns a random move from the moves array
+        """Returns a random move from the MOVES array
 
         Returns:
-            A str representing a move from the moves array
+            A str representing a move from the MOVES array
         """
-        return random.choice(moves)
+        return random.choice(MOVES)
 
 
 class HumanPlayer(Player):
@@ -49,12 +49,12 @@ class HumanPlayer(Player):
         """Returns a move of the human player's choosing
 
         Returns:
-            move: A str representing a move from the moves array chosen by the
+            move: A str representing a move from the MOVES array chosen by the
                 human player
         """
         while True:
             move = input("Rock, paper, scissors? > ").lower()
-            if move in moves:
+            if move in MOVES:
                 return move
 
 
@@ -66,7 +66,7 @@ class ReflectPlayer(Player):
     """
 
     def __init__(self):
-        self.next_move = random.choice(moves)
+        self.next_move = random.choice(MOVES)
 
     def move(self):
         """Returns the player's next move
@@ -103,14 +103,14 @@ class CyclePlayer(Player):
         return self.next_move
 
     def learn(self, my_move, their_move):
-        """Sets the player's next move to the next move in the moves array
+        """Sets the player's next move to the next move in the MOVES array
 
         Args:
             See base class
         """
-        my_move_index = moves.index(my_move)
+        my_move_index = MOVES.index(my_move)
         next_move_index = (my_move_index + 1) % 3
-        self.next_move = moves[next_move_index]
+        self.next_move = MOVES[next_move_index]
 
 
 def beats(one, two):
@@ -198,11 +198,11 @@ class Game:
 
 
 if __name__ == '__main__':
-    computer_player = random.choice([
+    COMPUTER_PLAYER = random.choice([
         Player(),
         RandomPlayer(),
         CyclePlayer(),
         ReflectPlayer()
     ])
-    game = Game(HumanPlayer(), computer_player)
-    game.play_game()
+    GAME = Game(HumanPlayer(), COMPUTER_PLAYER)
+    GAME.play_game()
