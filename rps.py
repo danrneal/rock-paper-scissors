@@ -132,15 +132,15 @@ class Game:
     """Creates a game or rock, paper, scissors played between two players
 
     Attributes:
-        p1: A Player class representing player 1
-        p2: A Player class representing player 2
+        player1: A Player class representing player 1
+        player2: A Player class representing player 2
         score1: An int representing player 1's score
         score2: An int representing player 2's score
     """
 
-    def __init__(self, p1, p2):
-        self.p1 = p1
-        self.p2 = p2
+    def __init__(self, player1, player2):
+        self.player1 = player1
+        self.player2 = player2
         self.score1 = 0
         self.score2 = 0
 
@@ -150,8 +150,8 @@ class Game:
         Collects the moves of both players, determines a winner, and then
         displays and updates the score
         """
-        move1 = self.p1.move()
-        move2 = self.p2.move()
+        move1 = self.player1.move()
+        move2 = self.player2.move()
         print(f"Player 1: {move1}  Player 2: {move2}")
 
         if beats(move1, move2):
@@ -164,8 +164,8 @@ class Game:
             print("** TIE **")
 
         print(f"Score: Player One {self.score1}, Player Two {self.score2}\n")
-        self.p1.learn(move1, move2)
-        self.p2.learn(move2, move1)
+        self.player1.learn(move1, move2)
+        self.player2.learn(move2, move1)
 
     def play_game(self):
         """Plays a 3-round game of rock, paper, scissors
