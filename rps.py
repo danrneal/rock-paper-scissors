@@ -28,7 +28,6 @@ class Player:
             my_move: A str representing the calling player's move
             their_move: A str representing the calling player's opponent's move
         """
-        pass
 
 
 class RandomPlayer(Player):
