@@ -176,8 +176,8 @@ class Game:
         """
         print("\nGame start!\n")
 
-        for round in range(3):
-            print(f"Round {round} of 3:")
+        for rnd in range(3):
+            print(f"Round {rnd} of 3:")
             self.play_round()
 
         while self.score1 == self.score2:
@@ -185,7 +185,7 @@ class Game:
             self.play_round()
 
         print(
-            f"Final Score: Player One {self.score1}, Player Two "
+            f"Final Scp1ore: Player One {self.score1}, Player Two "
             f"{self.score2}\n"
         )
 
