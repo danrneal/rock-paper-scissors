@@ -185,7 +185,7 @@ class Game:
             self.play_round()
 
         print(
-            f"Final Scp1ore: Player One {self.score1}, Player Two "
+            f"Final Score: Player One {self.score1}, Player Two "
             f"{self.score2}\n"
         )
 
