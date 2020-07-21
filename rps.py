@@ -28,7 +28,7 @@ class Player:
         """Returns the move 'rock'.
 
         Returns:
-            'rock': A str representing the move rock
+            rock: A str representing the move rock
         """
         return "rock"
 
@@ -92,7 +92,8 @@ class ReflectPlayer(Player):
         """Sets the player's next move to their opponent's previous move.
 
         Args:
-            See base class
+            my_move: A str representing the calling player's move
+            their_move: A str representing the calling player's opponent's move
         """
         self.next_move = their_move
 
@@ -120,7 +121,8 @@ class CyclePlayer(Player):
         """Sets the player's next move to the next move in the MOVES array.
 
         Args:
-            See base class
+            my_move: A str representing the calling player's move
+            their_move: A str representing the calling player's opponent's move
         """
         my_move_index = MOVES.index(my_move)
         next_move_index = (my_move_index + 1) % 3
