@@ -23,8 +23,9 @@ MOVES = ["rock", "paper", "scissors"]
 class Player:
     """Creates a player that always plays 'rock'."""
 
-    def move(self):
-        """Returns the move 'rock'
+    @staticmethod
+    def move():
+        """Returns the move 'rock'.
 
         Returns:
             'rock': A str representing the move rock
