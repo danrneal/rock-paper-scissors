@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-
 """A program that plays the game of Rock, Paper, Scissors.
 
     Usage: rps.py
