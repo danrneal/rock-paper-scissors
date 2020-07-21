@@ -21,7 +21,7 @@ MOVES = ['rock', 'paper', 'scissors']
 
 
 class Player:
-    """Creates a player that always plays 'rock'"""
+    """Creates a player that always plays 'rock'."""
 
     def move(self):
         """Returns the move 'rock'
@@ -32,7 +32,7 @@ class Player:
         return 'rock'
 
     def learn(self, my_move, their_move):
-        """Placeholder for child classes
+        """Placeholder for child classes.
 
         Args:
             my_move: A str representing the calling player's move
@@ -41,10 +41,10 @@ class Player:
 
 
 class RandomPlayer(Player):
-    """Creates a player that plays a random move from the MOVES array"""
+    """Creates a player that plays a random move from the MOVES array."""
 
     def move(self):
-        """Returns a random move from the MOVES array
+        """Returns a random move from the MOVES array.
 
         Returns:
             A str representing a move from the MOVES array
@@ -53,10 +53,10 @@ class RandomPlayer(Player):
 
 
 class HumanPlayer(Player):
-    """Creates a player that is human controllable"""
+    """Creates a player that is human controllable."""
 
     def move(self):
-        """Returns a move of the human player's choosing
+        """Returns a move of the human player's choosing.
 
         Returns:
             move: A str representing a move from the MOVES array chosen by the
@@ -69,7 +69,7 @@ class HumanPlayer(Player):
 
 
 class ReflectPlayer(Player):
-    """Creates a player that plays based on the opponent's previous move
+    """Creates a player that plays based on the opponent's previous move.
 
     Attributes:
         next_move: A str representing the player's next move
@@ -79,7 +79,7 @@ class ReflectPlayer(Player):
         self.next_move = random.choice(MOVES)
 
     def move(self):
-        """Returns the player's next move
+        """Returns the player's next move.
 
         Returns:
             self.next_move: A str presenting the players next move
@@ -87,7 +87,7 @@ class ReflectPlayer(Player):
         return self.next_move
 
     def learn(self, my_move, their_move):
-        """Sets the player's next move to their opponent's previous move
+        """Sets the player's next move to their opponent's previous move.
 
         Args:
             See base class
@@ -96,16 +96,17 @@ class ReflectPlayer(Player):
 
 
 class CyclePlayer(Player):
-    """Creates a player that plays 'rock', 'paper', 'scissors', in that order
+    """Creates a player that plays 'rock', 'paper', 'scissors', in that order.
 
     Attributes:
         next_move: A str representing the player's next move
     """
+
     def __init__(self):
         self.next_move = "rock"
 
     def move(self):
-        """Returns the player's next move
+        """Returns the player's next move.
 
         Returns:
             self.next_move: A str presenting the players next move
@@ -113,7 +114,7 @@ class CyclePlayer(Player):
         return self.next_move
 
     def learn(self, my_move, their_move):
-        """Sets the player's next move to the next move in the MOVES array
+        """Sets the player's next move to the next move in the MOVES array.
 
         Args:
             See base class
@@ -124,7 +125,7 @@ class CyclePlayer(Player):
 
 
 def beats(one, two):
-    """Returns a bool representing if the first arg is the winner
+    """Returns a bool representing if the first arg is the winner.
 
     Args:
         one: A str representing a player's move
@@ -139,7 +140,7 @@ def beats(one, two):
 
 
 class Game:
-    """Creates a game or rock, paper, scissors played between two players
+    """Creates a game or rock, paper, scissors played between two players.
 
     Attributes:
         player1: A Player class representing player 1
@@ -155,7 +156,7 @@ class Game:
         self.score2 = 0
 
     def play_round(self):
-        """Plays a round of rock, paper Scissors
+        """Plays a round of rock, paper Scissors.
 
         Collects the moves of both players, determines a winner, and then
         displays and updates the score
@@ -178,7 +179,7 @@ class Game:
         self.player2.learn(move2, move1)
 
     def play_game(self):
-        """Plays a 3-round game of rock, paper, scissors
+        """Plays a 3-round game of rock, paper, scissors.
 
         Plays three rounds of rock, paper scissors, and in the event of a tie
         score, continues to play extra rounds until there is a winner, and then
