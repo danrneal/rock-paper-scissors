@@ -76,6 +76,7 @@ class ReflectPlayer(Player):
     """
 
     def __init__(self):
+        """Reflect Player set-up."""
         self.next_move = random.choice(MOVES)
 
     def move(self):
@@ -103,6 +104,7 @@ class CyclePlayer(Player):
     """
 
     def __init__(self):
+        """Cycle Player set-up."""
         self.next_move = "rock"
 
     def move(self):
@@ -152,6 +154,7 @@ class Game:
     """
 
     def __init__(self, player1, player2):
+        """Game set-up."""
         self.player1 = player1
         self.player2 = player2
         self.score1 = 0
