@@ -1,6 +1,18 @@
 """A program that plays the game of Rock, Paper, Scissors.
 
-    Usage: rps.py
+Usage: rps.py
+
+Attributes:
+    MOVES: A list of strs representing possible moves (default: "rock",
+        "paper", and "scissors")
+
+Classes:
+    Player()
+    RandomPlayer()
+    HumanPlayer()
+    ReflectPlayer()
+    CyclePlayer()
+    Game()
 """
 
 import random
