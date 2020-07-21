@@ -4,9 +4,10 @@ A program that plays the game of Rock, Paper, Scissors.
 
 ## Usage
 
-```
+```bash
 Usage: rps.py
 ```
+
 That's it!
 
 ## Credit
