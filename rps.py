@@ -17,7 +17,7 @@ Classes:
 
 import random
 
-MOVES = ['rock', 'paper', 'scissors']
+MOVES = ["rock", "paper", "scissors"]
 
 
 class Player:
@@ -29,7 +29,7 @@ class Player:
         Returns:
             'rock': A str representing the move rock
         """
-        return 'rock'
+        return "rock"
 
     def learn(self, my_move, their_move):
         """Placeholder for child classes.
@@ -134,9 +134,11 @@ def beats(one, two):
     Returns:
         A bool that is True if one is the winner
     """
-    return ((one == 'rock' and two == 'scissors') or
-            (one == 'scissors' and two == 'paper') or
-            (one == 'paper' and two == 'rock'))
+    return (
+        (one == "rock" and two == "scissors")
+        or (one == "scissors" and two == "paper")
+        or (one == "paper" and two == "rock")
+    )
 
 
 class Game:
@@ -208,12 +210,9 @@ class Game:
         print("Game over!\n")
 
 
-if __name__ == '__main__':
-    COMPUTER_PLAYER = random.choice([
-        Player(),
-        RandomPlayer(),
-        CyclePlayer(),
-        ReflectPlayer()
-    ])
+if __name__ == "__main__":
+    COMPUTER_PLAYER = random.choice(
+        [Player(), RandomPlayer(), CyclePlayer(), ReflectPlayer()]
+    )
     GAME = Game(HumanPlayer(), COMPUTER_PLAYER)
     GAME.play_game()
